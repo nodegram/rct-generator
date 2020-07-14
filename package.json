@@ -1,5 +1,5 @@
 {
-  "name": "@nodegram/rct-generator",
+  "name": "rct-generator",
   "version": "1.0.2",
   "description": "",
   "main": "index.js",
