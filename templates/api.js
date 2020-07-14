@@ -1,11 +1,13 @@
 const { API_URL } = process.env;
 
-const get__Name__ = (id) => {
+const get__Name__ = async (id) => {
   const url = `${API_URL}/__name__/${id}`;
 
-  return fetch(url, {
+  const response = await fetch(url, {
     method: 'GET',
   });
+
+  return { data: response.json() };
 };
 
 export default get__Name__;
