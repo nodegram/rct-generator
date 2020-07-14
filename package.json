@@ -1,5 +1,5 @@
 {
-  "name": "rct-generator",
+  "name": "@nodegram/rct-generator",
   "version": "1.0.2",
   "description": "",
   "main": "index.js",
@@ -11,7 +11,7 @@
     "test:coverage": "jest --coverage"
   },
   "publishConfig": {
-    "access": "public"
+    "registry": "https://npm.pkg.github.com/"
   },
   "bin": {
     "rct-generator": "./index.js"
