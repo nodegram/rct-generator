@@ -26,7 +26,7 @@ describe('getBasePath', () => {
     const appPath = join(process.cwd(), 'app');
     utils.mkdirp(appPath);
 
-    const generatedPath = utils.getBasePath();
+    const generatedPath = utils.getBasePath('app');
     expect(generatedPath).toBe(appPath);
 
     fs.rmdirSync(appPath, { recursive: true });
@@ -68,7 +68,7 @@ describe('formatName', () => {
 
   it('should handle one word param', () => {
     const output = 'Profile';
-    const inputs = ['profile','proFIle', 'Profile'];
+    const inputs = ['profile', 'proFIle', 'Profile'];
 
     inputs.forEach((input, index) => {
       expect(utils.formatName(input)).toBe(output);
