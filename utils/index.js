@@ -1,17 +1,22 @@
 const { existsSync, mkdirSync, writeFileSync, readFileSync } = require('fs');
 const { join } = require('path');
 
+const _toPascalCase = (str) => {
+  return str.charAt(0).toUpperCase() + str.substr(1).toLowerCase();
+};
+
 const _replaceAll = (str, replacement) => {
-  const delimiter = '__NAME__';
+  const delimiter = '__name__';
+  const DELIMETER = '__NAME__';
+  const Delimeter = '__Name__';
+
   const title = '__TITLE__';
 
   return str
-    .replace(new RegExp(delimiter, 'g'), replacement)
+    .replace(new RegExp(delimiter, 'g'), replacement.toLowerCase())
+    .replace(new RegExp(DELIMETER, 'g'), replacement.toUpperCase())
+    .replace(new RegExp(Delimeter, 'g'), _toPascalCase(replacement))
     .replace(new RegExp(title, 'g'), replacement.replace('Component', ''));
-};
-
-const _toPascalCase = (str) => {
-  return str.charAt(0).toUpperCase() + str.substr(1).toLowerCase();
 };
 
 const formatName = (name) => {
