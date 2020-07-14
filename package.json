@@ -1,6 +1,6 @@
 {
   "name": "rct-generator",
-  "version": "1.0.3",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "test:coverage": "jest --coverage"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "access": "public"
   },
   "bin": {
     "rct-generator": "./index.js"
