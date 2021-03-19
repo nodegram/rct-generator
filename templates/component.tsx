@@ -5,7 +5,7 @@ import styles from './styles';
 
 type Props = {};
 
-function __NAME__({}: Props) {
+function __Name__Component({}: Props) {
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.title}>__TITLE__</Text>
@@ -13,4 +13,4 @@ function __NAME__({}: Props) {
   );
 }
 
-export default __NAME__;
+export default __Name__Component;

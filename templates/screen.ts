@@ -1,3 +1,3 @@
-import __NAME__Screen from './__NAME__.container';
+import __Name__Screen from './__Name__.container';
 
-export default __NAME__Screen;
+export default __Name__Screen;
